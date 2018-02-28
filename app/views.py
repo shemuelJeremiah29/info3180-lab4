@@ -54,8 +54,10 @@ def upload():
 
 @app.route('/files') 
 def files():   
-    filelist= get_uploaded_images()
-    return render_template('files.html', filelist) 
+    filelist= get_uploaded_images() 
+    if not session.get('logged_in'): 
+        flash("Please Login to View Files")
+    return render_template('files.html', files=filelist) 
     
 @app.route('/login', methods=['POST', 'GET'])
 def login():

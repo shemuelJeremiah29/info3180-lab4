@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+
+<ul>  
+ {% for fil in files%} 
+<li> 
+    {% include 'flash_messages.html' %} 
+   <img src="{{ url_for('static', filename="uploads/" + fil) }}" />
+</li>  
+ {% endfor %}
+</ul> 

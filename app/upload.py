@@ -1,7 +1,7 @@
 import os
 
-    rootdir = os.getcwd()
-    print rootdir 
+rootdir = os.getcwd()
+print rootdir 
 
 def get_uploaded_images(): 
     lst=[] 
